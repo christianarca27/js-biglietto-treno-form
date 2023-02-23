@@ -33,5 +33,5 @@ buttonEl.addEventListener("click", function() {
     }
 
     // TEST: Stampo in pagina il risultato finale
-    document.getElementById("biglietto").innerText = "Il prezzo del biglietto di " + nomePasseggero + " è di " + prezzoBiglietto + "€";
+    document.getElementById("ticket").innerText = "Il prezzo del biglietto di " + nomePasseggero + " è di " + prezzoBiglietto + "€";
 })
