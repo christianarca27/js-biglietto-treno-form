@@ -8,19 +8,42 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <input type="text" id="nome-passeggero">
+    <h1 class="text-centered white">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
 
-    <input type="number" id="km-da-percorrere">
+    <div id="ticket-generator" class="container-centered">
+        <div id="input-row">
+            <div class="input-col">
+                <label for="nome-passeggero">Nome Cognome</label>
+                <input type="text" id="nome-passeggero">
+            </div>
 
-    <select id="fascia-eta">
-        <option value="minorenne">Minorenne</option>
-        <option value="maggiorenne">Maggiorenne</option>
-        <option value="over-65">Over 65</option>
-    </select>
+            <div class="input-col">
+                <label for="km-da-percorrere">Km da percorrere</label>
+                <input type="number" id="km-da-percorrere">
+            </div>
 
-    <button id="btn-genera">Genera biglietto</button>
+            <div class="input-col">
+                <label for="fascia-eta">Fascia d'età</label>
+                <select id="fascia-eta">
+                    <option value="minorenne">Minorenne</option>
+                    <option value="maggiorenne">Maggiorenne</option>
+                    <option value="over-65">Over 65</option>
+                </select>
+            </div>
+        </div>
 
-    <div id="biglietto"></div>
+        <div id="button-row">
+            <button id="btn-genera" class="btn">Genera biglietto</button>
+
+            <button id="btn-annulla" class="btn">Annulla</button>
+        </div>
+    </div>
+
+    <h2 class="text-centered white">IL TUO BIGLIETTO</h2>
+
+    <div class="container-centered">
+        <div id="biglietto"></div>
+    </div>
 
     <script src="js/script.js"></script>
 </body>

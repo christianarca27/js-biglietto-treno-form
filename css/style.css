@@ -1,0 +1,83 @@
+body {
+    background-color: #b91450;
+
+    font-family: sans-serif;
+}
+
+input, select {
+    padding: 5px;
+    border: 2px solid #b91450;
+    border-radius: 5px;
+
+    font-size: 16px;
+    font-weight: bold;
+}
+
+select:focus {
+    border-color: goldenrod;
+}
+
+input:focus-visible, select:focus-visible {
+    outline-color: goldenrod;
+}
+
+.white {
+    color: white;
+}
+
+.text-centered {
+    text-align: center;
+}
+
+.container-centered {
+    background-color: white;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.btn {
+    padding: 5px;
+    border: 2px solid grey;
+    border-radius: 5px;
+
+    font-size: 16px;
+    font-weight: 900;
+    color: #b91450;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+#ticket-generator {
+    border-radius: 10px;
+}
+
+#ticket-generator #input-row {
+    margin-bottom: 50px;
+    
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+
+    color: #b91450;
+}
+
+#ticket-generator #input-row .input-col {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 20px;
+}
+
+#ticket-generator #button-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#ticket-generator #button-row #btn-genera {
+    border-color: goldenrod;
+}
