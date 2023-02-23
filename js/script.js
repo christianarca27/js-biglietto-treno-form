@@ -1,7 +1,7 @@
 const prezzoPerKm = 0.21;
 
 // Leggo e salvo il riferimento al bottone di generazione
-let buttonGenerateEl = document.getElementById("btn-genera");
+let buttonGenerateEl = document.getElementById("btn-generate");
 console.log(buttonGenerateEl);
 
 // Evento nel caso venga cliccato il bottone di generazione del biglietto
