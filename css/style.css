@@ -1,3 +1,4 @@
+/* common */
 body {
     background-color: #b91450;
 
@@ -54,7 +55,9 @@ input:focus-visible, select:focus-visible {
 .btn:hover {
     cursor: pointer;
 }
+/* /common */
 
+/* ticket-generator */
 #ticket-generator {
     border-radius: 10px;
 }
@@ -85,25 +88,31 @@ input:focus-visible, select:focus-visible {
 #ticket-generator #button-row #btn-generate {
     border-color: goldenrod;
 }
+/* /ticket-generator */
 
+/* ticket-wrapper */
 #ticket-wrapper {
     display: none;
 }
 
-#ticket {
+/* ticket */
+#ticket-wrapper #ticket {
     display: flex;
 }
 
-#ticket #ticket-left {
+/* ticket-left */
+#ticket-wrapper #ticket #ticket-left {
     background-color: grey;
     padding: 20px;
 }
 
-#ticket #ticket-left #passenger-name {
+#ticket-wrapper #ticket #ticket-left #passenger-name {
     font-weight: bold;
 }
+/* /ticket-left */
 
-#ticket #ticket-right {
+/* ticket-right */
+#ticket-wrapper #ticket #ticket-right {
     padding: 20px;
     border-top: 1px solid grey;
     border-bottom: 1px solid grey;
@@ -114,8 +123,11 @@ input:focus-visible, select:focus-visible {
     flex-grow: 1;
 }
 
-#ticket #ticket-right .ticket-right-col {
+#ticket-wrapper #ticket #ticket-right .ticket-right-col {
     display: flex;
     flex-flow: column nowrap;
     gap: 40px;
 }
+/* /ticket-right */
+/* /ticket */
+/* /ticket-wrapper */
