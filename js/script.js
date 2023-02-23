@@ -1,37 +1,37 @@
 const prezzoPerKm = 0.21;
 
 // Leggo e salvo il riferimento al bottone di generazione
-let buttonEl = document.getElementById("btn-genera");
-console.log(buttonEl);
+let buttonGenerateEl = document.getElementById("btn-genera");
+console.log(buttonGenerateEl);
 
 // Evento nel caso venga cliccato il bottone di generazione del biglietto
-buttonEl.addEventListener("click", function() {
+buttonGenerateEl.addEventListener("click", function() {
     //Leggo e salvo il valore dell'input "Nome Cognome"
-    let nomePasseggeroEl = document.getElementById("nome-passeggero");
-    let nomePasseggero = nomePasseggeroEl.value;
-    console.log(nomePasseggero);
+    let passengerNameEl = document.getElementById("passenger-name");
+    let passengerName = passengerNameEl.value;
+    console.log(passengerName);
 
     //Leggo e salvo il valore dell'input "Km da percorrere"
-    let kmPercorsiEl = document.getElementById("km-da-percorrere");
-    let kmPercorsi = kmPercorsiEl.value;
-    console.log(kmPercorsi);
+    let kmToGoEl = document.getElementById("km-to-go");
+    let kmToGo = kmToGoEl.value;
+    console.log(kmToGo);
     
     //Leggo e salvo il valore dell'input "Fascia d'età"
-    let fasciaEtaEl = document.getElementById("fascia-eta");
-    let fasciaEta = fasciaEtaEl.value;
-    console.log(fasciaEta);
+    let ageRangeEl = document.getElementById("age-range");
+    let ageRange = ageRangeEl.value;
+    console.log(ageRange);
 
     // Calcolo il prezzo del biglietto a meno di scontistiche
-    let prezzoBiglietto = kmPercorsi * prezzoPerKm;
+    let ticketPrice = kmToGo * prezzoPerKm;
 
     // Calcolo la scontistica se mi trovo in una delle fasce d'età che la prevede
-    if(fasciaEta == "minorenne") {
-        prezzoBiglietto *= 0.8;
+    if(ageRange == "minorenne") {
+        ticketPrice *= 0.8;
     }
-    else if(fasciaEta == "over-65") {
-        prezzoBiglietto *= 0.6;
+    else if(ageRange == "over-65") {
+        ticketPrice *= 0.6;
     }
 
     // TEST: Stampo in pagina il risultato finale
-    document.getElementById("ticket").innerText = "Il prezzo del biglietto di " + nomePasseggero + " è di " + prezzoBiglietto + "€";
+    document.getElementById("ticket").innerText = "Il prezzo del biglietto di " + passengerName + " è di " + ticketPrice + "€";
 })
