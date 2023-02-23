@@ -40,3 +40,13 @@ buttonGenerateEl.addEventListener("click", function() {
     document.getElementById("ticket-price").innerText = ticketPrice.toFixed(2) + "€";
     document.getElementById("ticket-wrapper").style.display = "block";
 })
+
+
+// Leggo e salvo il riferimento al bottone di annulla
+let buttonCancelEl = document.getElementById("btn-cancel");
+console.log(buttonCancelEl);
+
+// Evento nel caso venga cliccato il bottone di annullamento
+buttonCancelEl.addEventListener("click", function() {
+    document.getElementById("ticket-wrapper").style.display = "none";
+})
