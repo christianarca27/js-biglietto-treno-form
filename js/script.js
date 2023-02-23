@@ -25,13 +25,18 @@ buttonGenerateEl.addEventListener("click", function() {
     let ticketPrice = kmToGo * prezzoPerKm;
 
     // Calcolo la scontistica se mi trovo in una delle fasce d'età che la prevede
+    let ticketType = "Biglietto Standard";
     if(ageRange == "minorenne") {
         ticketPrice *= 0.8;
+        ticketType = "Biglietto Minorenni"
     }
     else if(ageRange == "over-65") {
         ticketPrice *= 0.6;
+        ticketType = "Biglietto Over 65"
     }
 
-    // TEST: Stampo in pagina il risultato finale
-    document.getElementById("ticket").innerText = "Il prezzo del biglietto di " + passengerName + " è di " + ticketPrice + "€";
+    document.getElementById("ticket-name").innerText = passengerName;
+    document.getElementById("ticket-type").innerText = ticketType;
+    document.getElementById("ticket-price").innerText = ticketPrice.toFixed(2) + "€";
+    document.getElementById("ticket-wrapper").style.display = "block";
 })
